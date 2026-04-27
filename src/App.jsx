@@ -406,12 +406,16 @@ body { background: var(--paper); color: var(--ink); font-family: var(--mono); }
 
 .task-actions { display: flex; gap: 6px; align-items: center; }
 .btn-icon {
-  width: 30px; height: 30px;
+  width: auto;
+  height: 30px;
+  padding: 4px 10px;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: transparent;
   cursor: pointer;
-  font-size: .8rem;
+  font-size: .7rem;
+  font-family: var(--mono);
+  color: var(--muted);
   display: flex; align-items: center; justify-content: center;
   transition: all .15s;
 }
@@ -425,7 +429,8 @@ body { background: var(--paper); color: var(--ink); font-family: var(--mono); }
   padding: 4px 10px;
   border: 1px solid var(--border);
   border-radius: 99px;
-  background: transparent;
+  background: var(--cream);
+  color: var(--ink);
   cursor: pointer;
   transition: all .15s;
   white-space: nowrap;
@@ -920,8 +925,8 @@ export default function App() {
                       <button className="btn-status" onClick={() => advanceStatus(t)}>
                         → {STATUS_LABEL[STATUS_NEXT[t.status]]}
                       </button>
-                      <button className="btn-icon" title="Editar" onClick={() => { setEditTask(t); setModal("edit"); }}>✏️</button>
-                      <button className="btn-icon danger" title="Remover" onClick={() => deleteTask(t.id)}>🗑</button>
+                      <button className="btn-icon" title="Editar" onClick={() => { setEditTask(t); setModal("edit"); }}>Editar</button>
+                      <button className="btn-icon danger" title="Remover" onClick={() => deleteTask(t.id)}>Excluir</button>
                     </div>
                   </div>
                 ))}
