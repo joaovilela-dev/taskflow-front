@@ -19,7 +19,7 @@ const apiClient = {
     const data = await res.json().catch(() => ({}));
     if (!res.ok) {
       const detail = Array.isArray(data.detail)
-        ? data.detail.map(d => d.msg).join(", ")
+        ? data.detail.map(d => d.msg.replace(/^value error,\s*/i, "")).join(", ")
         : data.detail || "Erro desconhecido";
       throw new ApiError(detail, res.status);
     }
