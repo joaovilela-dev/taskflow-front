@@ -17,10 +17,12 @@ const apiClient = {
       ...options,
     });
     const data = await res.json().catch(() => ({}));
-    if (!res.ok) const detail = Array.isArray(data.detail) 
-  ? data.detail.map(d => d.msg).join(", ") 
-  : data.detail || "Erro desconhecido";
-throw new ApiError(detail, res.status);
+    if (!res.ok) {
+      const detail = Array.isArray(data.detail)
+        ? data.detail.map(d => d.msg).join(", ")
+        : data.detail || "Erro desconhecido";
+      throw new ApiError(detail, res.status);
+    }
     return data;
   },
   get:    (path, token)        => apiClient.request(path, {}, token),
