@@ -19,8 +19,9 @@ export default function AuthScreen({ onLogin }) {
       const data = await apiClient.post(path, body);
       onLogin(data.access_token, data.user);
     } catch (e) {
-      setError(e.message);
-    } finally {
+  const msg = typeof e.message === "string" ? e.message : "Erro ao realizar operação";
+  setError(msg);
+} finally {
       setLoading(false);
     }
   };
