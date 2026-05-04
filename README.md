@@ -1,16 +1,136 @@
-# React + Vite
+# 🚀 TaskFlow Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web do **TaskFlow**, uma aplicação completa de gerenciamento de tarefas — React · Vite · API REST
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Funcionalidades
 
-## React Compiler
+🔐 Autenticação de usuário (login e registro)
+📋 CRUD completo de tarefas
+🗂️ Organização por categorias
+🔎 Filtros por status, prioridade e categoria
+🌙 Tema claro/escuro
+🔔 Feedback visual com toasts
+⚡ Interface rápida e responsiva
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧱 Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Camada      | Tecnologia        |
+| ----------- | ----------------- |
+| Frontend    | React 18          |
+| Build Tool  | Vite              |
+| Linguagem   | JavaScript (ES6+) |
+| Estilização | CSS               |
+| API Client  | Fetch API         |
+
+---
+
+## 🗂️ Estrutura do Projeto
+
+```bash
+src/
+├── components/
+├── hooks/
+├── services/
+├── styles/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚡ Como Rodar
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/joaovilela-dev/taskflow-front.git
+cd taskflow-front
+```
+
+### 2. Instale as dependências
+
+```bash
+npm install
+```
+
+### 3. Rode o projeto
+
+```bash
+npm run dev
+```
+
+Aplicação disponível em: http://localhost:5173
+
+---
+
+## 🌐 Integração com API
+
+Este frontend consome a API do TaskFlow:
+
+* Base URL: `http://localhost:8000`
+
+Certifique-se de que o backend esteja rodando corretamente.
+
+---
+
+## 🔗 Backend
+
+A API utilizada neste projeto está disponível em:
+
+* Repositório: https://github.com/joaovilela-dev/taskflow-api
+* Documentação: http://localhost:8000/docs
+
+---
+
+## 📸 Preview
+
+### 🔐 Tela de Login
+
+![Login](./public/login.png)
+
+### 📋 Dashboard
+
+![Dashboard](./public/dashboard.png)
+
+### ✅ Tarefas
+
+![Tasks](./public/tasks.png)
+
+---
+
+## 🔐 Autenticação
+
+O sistema utiliza autenticação via JWT.
+
+Após login ou registro, o token é armazenado e enviado automaticamente nas requisições protegidas.
+
+---
+
+## 🚀 Deploy
+
+Sugestões de deploy:
+
+* Vercel
+* Netlify
+
+---
+
+## 📌 Status do Projeto
+
+✅ Finalizado
+
+---
+
+## 📄 Licença
+
+MIT © 2026 João Victor Vilela
+
+---
+
+## 👨‍💻 Autor
+
+João Victor Vilela
