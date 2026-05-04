@@ -71,7 +71,7 @@ Aplicação disponível em: http://localhost:5173
 
 Este frontend consome a API do TaskFlow:
 
-* Base URL: `http://localhost:8000`
+* Base URL: `https://taskflow-api-z8fz.onrender.com`
 
 Certifique-se de que o backend esteja rodando corretamente.
 
@@ -82,7 +82,7 @@ Certifique-se de que o backend esteja rodando corretamente.
 A API utilizada neste projeto está disponível em:
 
 * Repositório: https://github.com/joaovilela-dev/taskflow-api
-* Documentação: http://localhost:8000/docs
+* Documentação: https://taskflow-api-z8fz.onrender.com/docs
 
 ---
 
@@ -90,15 +90,15 @@ A API utilizada neste projeto está disponível em:
 
 ### 🔐 Tela de Login
 
-![Login](./public/login.png)
+![Login](./public/images/login.png)
 
 ### 📋 Dashboard
 
-![Dashboard](./public/dashboard.png)
+![Dashboard](./public/images/dashboard.png)
 
 ### ✅ Tarefas
 
-![Tasks](./public/tasks.png)
+![Tasks](./public/images/tasks.png)
 
 ---
 
@@ -112,10 +112,7 @@ Após login ou registro, o token é armazenado e enviado automaticamente nas req
 
 ## 🚀 Deploy
 
-Sugestões de deploy:
-
-* Vercel
-* Netlify
+Frontend disponível em: https://taskflow-front-tau.vercel.app
 
 ---
 
